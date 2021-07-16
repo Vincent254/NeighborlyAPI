@@ -17,7 +17,6 @@ try:
     print(os.environ.get('SENDGRID_API_KEY'))
     print('=====================')
     sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-    # sg = SendGridAPIClient(        "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")
     response = sg.send(message)
     print(response.status_code)
     print(response.body)
